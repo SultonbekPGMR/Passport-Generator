@@ -4,9 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffbf69"
+    android:background="#00b4d8"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/tv_no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No data"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_gravity="center" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/my_rv"
@@ -14,23 +22,30 @@
         android:layout_height="match_parent"
         android:clickable="true"
         android:focusable="true"
-        android:layout_marginTop="?attr/actionBarSize"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_anchorGravity="fill_vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:listitem="@layout/rv_item" />
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#FB8C00"
+            android:background="#0077b6"
             app:layout_scrollFlags="scroll|enterAlways|snap"
-            app:titleTextColor="#233d4d"
+            app:titleTextColor="@color/white"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             app:title="Users"
             app:titleTextAppearance="@style/MyTitleTextApperance" />
+    </com.google.android.material.appbar.AppBarLayout>
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -39,7 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="10dp"
-        android:backgroundTint="#f26419"
+        android:backgroundTint="#0077b6"
         android:elevation="8dp"
         android:src="@drawable/baseline_add_24"
         app:backgroundTintMode="screen"

@@ -5,30 +5,68 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#90e0ef"
     tools:context=".AddActivity">
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
+        app:navigationIcon="@drawable/baseline_arrow_back_24"
         android:layout_height="?attr/actionBarSize"
-        android:background="#FB8C00"
+        android:background="#0077b6"
         app:layout_scrollFlags="scroll|enterAlways|snap"
-        app:titleTextColor="#233d4d"
+        app:titleTextColor="@color/white"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:title="New User"
         app:titleTextAppearance="@style/MyTitleTextApperance" />
 
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@drawable/img_circle" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@id/image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:padding="8dp"
+            android:src="@drawable/img_person" />
+
+        <ImageView
+            android:id="@+id/btn_add"
+            android:layout_width="30dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"            android:layout_height="30dp"
+            android:layout_gravity="bottom|end"
+            android:src="@drawable/img_round_plus" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         style="@style/TextInputLayoutStyle"
-        android:layout_marginTop="50dp"
-        app:endIconTint="@color/yellow"
+        android:layout_marginTop="20dp"
+        app:endIconTint="#0077b6"
         android:layout_height="?attr/actionBarSize"
         android:hint="Name"
         app:endIconMode="clear_text"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        app:hintTextColor="@color/yellow"
-        android:layout_marginBottom="10dp"
+        app:hintTextColor="#0077b6"
+        android:layout_marginBottom="5dp"
         app:helperTextTextColor="#E53935">
 
         <EditText
@@ -39,18 +77,18 @@
             android:gravity="top"
             android:importantForAutofill="no"
             android:inputType="textPersonName"
-            android:textColor="@color/yellow" />
+            android:textColor="#0077b6" />
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         style="@style/TextInputLayoutStyle"
-        app:endIconTint="@color/yellow"
+        app:endIconTint="#0077b6"
         android:layout_height="?attr/actionBarSize"
         android:hint="Surname"
         app:endIconMode="clear_text"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        app:hintTextColor="@color/yellow"
+        app:hintTextColor="#0077b6"
         android:layout_marginBottom="10dp"
         app:helperTextTextColor="#E53935">
 
@@ -62,7 +100,7 @@
             android:gravity="top"
             android:importantForAutofill="no"
             android:inputType="textPersonName"
-            android:textColor="@color/yellow" />
+            android:textColor="#0077b6" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -71,9 +109,9 @@
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:textAllCaps="false"
-        android:backgroundTint="@color/yellow"
-        android:textColor="#233d4d"
-        android:layout_marginTop="20dp"
+        android:backgroundTint="#0077b6"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
         android:clickable="true"
         android:focusable="true"
         android:foreground="?android:attr/selectableItemBackground"

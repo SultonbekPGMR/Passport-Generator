@@ -1,15 +1,13 @@
 package com.sultonbek1547.passportgenerator.database
 
-import androidx.room.Dao
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Query
+import androidx.room.*
 
 @Dao
 interface MyUserDao {
 
-    @Query("select * from user")
-    fun gelAllUser(): List<User>
+    // Define a method to get all the users sorted by their position.
+    @Query("SELECT * FROM user ORDER BY position ASC")
+    fun getAllUsers(): List<User>
 
     @Delete
     fun deleteUser(user: User)
@@ -19,6 +17,12 @@ interface MyUserDao {
 
     @Query("SELECT * FROM user WHERE passportId LIKE '%' || :str || '%'")
     fun checkForPassportId(str: String): List<User>
+
+    @Query("SELECT MAX(position) FROM user")
+    fun getMaxPosition(): Int
+
+    @Update
+    fun updateUser(user: User)
 
 
 }

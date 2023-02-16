@@ -17,7 +17,7 @@ abstract class AppDatabase : RoomDatabase() {
         @Synchronized
         fun getInstance(context: Context): AppDatabase {
             if (instance == null) {
-                instance = Room.databaseBuilder(context, AppDatabase::class.java, "passport_db")
+                instance = Room.databaseBuilder(context, AppDatabase::class.java, "passportd_db")
                     .fallbackToDestructiveMigration()
                     .allowMainThreadQueries()
                     .build()

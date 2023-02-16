@@ -21,7 +21,7 @@
     </style>
 
     <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
-        <item name="boxStrokeColor">@color/yellow</item>
+        <item name="boxStrokeColor">#0077b6</item>
     </style>
 
     <style name="MyTitleTextApperance" parent="@android:style/TextAppearance.Medium">
@@ -29,5 +29,11 @@
         <item name="android:textSize">22sp</item>
         <item name="android:textColorPrimary">#233d4d</item>
     </style>
-
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+    <style name="AppModalStyle"
+        parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottom_sheet_back</item>
+    </style>
 </resources>

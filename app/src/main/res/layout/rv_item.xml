@@ -8,6 +8,7 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/item_card"
+            android:backgroundTint="#90e0ef"
             android:layout_width="match_parent"
             android:foreground="?android:attr/selectableItemBackground"
             android:background="?android:selectableItemBackground"
@@ -27,6 +28,7 @@
                     android:layout_height="80dp"
                     android:id="@+id/image"
                     app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+                    android:scaleType="centerCrop"
                     android:padding="8dp"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -44,7 +46,7 @@
                     android:textStyle="bold"
                     android:textColor="@color/black"
                     app:layout_constraintBottom_toTopOf="@id/tv_number"
-                    android:textSize="18sp"
+                    android:textSize="19sp"
                     app:layout_constraintLeft_toRightOf="@id/image"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -53,7 +55,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Number"
-                    android:textSize="15sp"
+                    android:textSize="17sp"
                     android:layout_marginBottom="5dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toLeftOf="@id/tv_name"
